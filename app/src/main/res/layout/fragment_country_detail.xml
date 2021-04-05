@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CountryDetailFragment">
+
+    <ImageView
+        android:id="@+id/CDImgView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:scaleType="fitCenter"
+        android:minHeight="200dp"
+        android:paddingTop="10dp"
+        android:src="@mipmap/ic_launcher_round">
+
+    </ImageView>
+
+    <TextView
+        android:id="@+id/CDNameTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/CDImgView"
+        android:layout_marginTop="3dp"
+        android:gravity="center_horizontal"
+        android:text="Country Name"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true">
+    </TextView>
+    <TextView
+        android:id="@+id/CDRegionTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/CDNameTv"
+        android:layout_marginTop="3dp"
+        android:gravity="center_horizontal"
+        android:text="Country Region"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true">
+    </TextView>
+    <TextView
+        android:id="@+id/CDCapitalTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/CDRegionTv"
+        android:layout_marginTop="3dp"
+        android:gravity="center_horizontal"
+        android:text="Country Capital"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true">
+    </TextView>
+    <TextView
+        android:id="@+id/CDCurrencyTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/CDCapitalTv"
+        android:layout_marginTop="3dp"
+        android:gravity="center_horizontal"
+        android:text="Country Currency"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true">
+    </TextView>
+    <TextView
+        android:id="@+id/CDLanguageTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/CDCurrencyTv"
+        android:layout_marginTop="3dp"
+        android:gravity="center_horizontal"
+        android:text="Country Language"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true">
+    </TextView>
+
+
+</RelativeLayout>
+</layout>
