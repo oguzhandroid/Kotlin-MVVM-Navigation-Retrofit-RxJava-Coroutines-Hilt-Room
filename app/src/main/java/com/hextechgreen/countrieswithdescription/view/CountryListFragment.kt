@@ -1,12 +1,11 @@
-package com.hextechgreen.countrieswithdescription
+package com.hextechgreen.countrieswithdescription.view
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import androidx.navigation.Navigation
+import com.hextechgreen.countrieswithdescription.R
 
 class CountryListFragment : Fragment() {
 

@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/countryListFragment"
-        android:name="com.hextechgreen.countrieswithdescription.CountryListFragment"
+        android:name="com.hextechgreen.countrieswithdescription.view.CountryListFragment"
         android:label="fragment_country_list"
         tools:layout="@layout/fragment_country_list" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/countryDetailFragment"
-        android:name="com.hextechgreen.countrieswithdescription.CountryDetailFragment"
+        android:name="com.hextechgreen.countrieswithdescription.view.CountryDetailFragment"
         android:label="fragment_country_detail"
         tools:layout="@layout/fragment_country_detail" >
         <action

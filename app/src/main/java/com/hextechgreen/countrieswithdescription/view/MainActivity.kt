@@ -1,12 +1,11 @@
-package com.hextechgreen.countrieswithdescription
+package com.hextechgreen.countrieswithdescription.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.TextView
-import android.widget.Toast
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.navigation.ui.NavigationUI
+import com.hextechgreen.countrieswithdescription.R
 
 class MainActivity : AppCompatActivity() {
 
@@ -16,7 +15,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         // İki Fragment arasında geçiş yaptığımızda geri tuşunu kullanabilmek için ;
-        navigationController = Navigation.findNavController(this,R.id.fragment)
+        navigationController = Navigation.findNavController(this,
+            R.id.fragment
+        )
         NavigationUI.setupActionBarWithNavController(this,navigationController)
     }
     // İki Fragment arasında geçiş yaptığımızda geri tuşunu kullanabilmek için ;

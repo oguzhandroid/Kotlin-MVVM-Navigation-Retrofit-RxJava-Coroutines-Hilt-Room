@@ -1,4 +1,4 @@
-package com.hextechgreen.countrieswithdescription
+package com.hextechgreen.countrieswithdescription.view
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,6 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import com.hextechgreen.countrieswithdescription.CountryDetailFragmentArgs
+import com.hextechgreen.countrieswithdescription.R
 
 
 class CountryDetailFragment : Fragment() {
@@ -29,7 +31,9 @@ class CountryDetailFragment : Fragment() {
 
         arguments?.let {
 
-           var uuid = CountryDetailFragmentArgs.fromBundle(it).countryUuid
+           var uuid = CountryDetailFragmentArgs.fromBundle(
+               it
+           ).countryUuid
             Toast.makeText(view.context,"Country UUID : $uuid",Toast.LENGTH_SHORT).show()
         }
     }
