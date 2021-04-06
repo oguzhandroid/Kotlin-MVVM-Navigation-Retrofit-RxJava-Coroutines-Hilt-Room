@@ -5,9 +5,11 @@ import android.view.TextureView
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.hextechgreen.countrieswithdescription.R
 import com.hextechgreen.countrieswithdescription.model.Country
+import com.hextechgreen.countrieswithdescription.view.CountryListFragmentDirections
 
 class CountryAdapter(val countryList: ArrayList<Country>) :
     RecyclerView.Adapter<CountryAdapter.CountryViewHolder>() {
@@ -29,6 +31,12 @@ class CountryAdapter(val countryList: ArrayList<Country>) :
             countryList[position].countryName
         holder.view.findViewById<TextView>(R.id.countryRegion).text =
             countryList[position].countryRegion
+
+
+        holder.view.setOnClickListener {
+            val action = CountryListFragmentDirections.actionCountryListFragmentToCountryDetailFragment(position)
+            Navigation.findNavController(it).navigate(action)
+        }
     }
 
     fun updateCountryList(newCountryList: List<Country>) {
