@@ -48,6 +48,8 @@ class CountryDetailFragment : Fragment() {
            ).countryUuid
             Toast.makeText(view.context,"Country UUID : $uuid",Toast.LENGTH_SHORT).show()
         }
+
+
     }
 
     fun observe() {

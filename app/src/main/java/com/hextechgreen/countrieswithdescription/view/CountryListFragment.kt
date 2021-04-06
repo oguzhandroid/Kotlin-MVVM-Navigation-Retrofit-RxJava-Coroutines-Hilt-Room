@@ -11,6 +11,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.hextechgreen.countrieswithdescription.R
 import com.hextechgreen.countrieswithdescription.adapter.CountryAdapter
 import com.hextechgreen.countrieswithdescription.viewmodel.CountryListViewModel
@@ -43,6 +44,16 @@ class CountryListFragment : Fragment() {
         view.findViewById<RecyclerView>(R.id.countryListRV).layoutManager = LinearLayoutManager(context)
         view.findViewById<RecyclerView>(R.id.countryListRV).adapter = adapter
 
+
+        view.findViewById<SwipeRefreshLayout>(R.id.swipeRefreshLayout).setOnRefreshListener {
+            view.findViewById<SwipeRefreshLayout>(R.id.swipeRefreshLayout).isRefreshing = false
+            view?.findViewById<RecyclerView>(R.id.countryListRV)?.visibility = View.GONE
+            view?.findViewById<TextView>(R.id.countryErrorTextView)?.visibility = View.GONE
+            view?.findViewById<ProgressBar>(R.id.countryListProgressBar)?.visibility = View.VISIBLE
+            viewModel.refreshData()
+
+
+        }
 
         observeLiveData()
 
