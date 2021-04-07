@@ -4,11 +4,14 @@ import android.view.LayoutInflater
 import android.view.TextureView
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.hextechgreen.countrieswithdescription.R
 import com.hextechgreen.countrieswithdescription.model.Country
+import com.hextechgreen.countrieswithdescription.util.downloadFromUrl
+import com.hextechgreen.countrieswithdescription.util.placeHolderProgressBar
 import com.hextechgreen.countrieswithdescription.view.CountryListFragmentDirections
 
 class CountryAdapter(val countryList: ArrayList<Country>) :
@@ -31,6 +34,9 @@ class CountryAdapter(val countryList: ArrayList<Country>) :
             countryList[position].countryName
         holder.view.findViewById<TextView>(R.id.countryRegion).text =
             countryList[position].countryRegion
+        holder.view.findViewById<ImageView>(R.id.imageView).downloadFromUrl(countryList[position].imageUrl,
+            placeHolderProgressBar(holder.view.context))
+
 
 
         holder.view.setOnClickListener {

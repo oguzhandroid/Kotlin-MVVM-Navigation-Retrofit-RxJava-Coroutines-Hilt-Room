@@ -47,9 +47,9 @@ class CountryListFragment : Fragment() {
 
         view.findViewById<SwipeRefreshLayout>(R.id.swipeRefreshLayout).setOnRefreshListener {
             view.findViewById<SwipeRefreshLayout>(R.id.swipeRefreshLayout).isRefreshing = false
-            view?.findViewById<RecyclerView>(R.id.countryListRV)?.visibility = View.GONE
-            view?.findViewById<TextView>(R.id.countryErrorTextView)?.visibility = View.GONE
-            view?.findViewById<ProgressBar>(R.id.countryListProgressBar)?.visibility = View.VISIBLE
+            view.findViewById<RecyclerView>(R.id.countryListRV)?.visibility = View.GONE
+            view.findViewById<TextView>(R.id.countryErrorTextView)?.visibility = View.GONE
+            view.findViewById<ProgressBar>(R.id.countryListProgressBar)?.visibility = View.VISIBLE
             viewModel.refreshData()
 
 
@@ -64,7 +64,7 @@ class CountryListFragment : Fragment() {
         }*/
     }
 
-    fun observeLiveData() {
+    private fun observeLiveData() {
         viewModel.countries.observe(viewLifecycleOwner, Observer {
 
             it?.let {
